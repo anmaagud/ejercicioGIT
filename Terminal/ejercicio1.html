@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    let numeroDeElementos = 10;
+    let resultados = [];
+    let vlrActual;
+    let vlrAnterior;
+
+    for (let i = 0; i < numeroDeElementos; i++) {
+      if (i == 0) {
+        vlrAnterior = 0;
+        resultados.push(vlrAnterior);
+      } else if (i == 1) {
+        vlrActual = 1;
+        resultados.push(vlrActual);
+      } else {
+        let vlrInstante = vlrAnterior;
+        vlrAnterior = vlrActual;
+        vlrActual = vlrInstante + vlrActual;
+        resultados.push(vlrActual);
+
+      }
+
+    }
+
+    console.log(resultados)
+
+
+  </script>
+</body>
+
+</html>
